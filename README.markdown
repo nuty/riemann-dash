@@ -1,14 +1,14 @@
 Riemann-Dash
 ============
 
-A javascript, websockets-powered dashboard for Riemann.
+A javascript, websockets-powered dashboard for Riemann, with a simple login page.
 
 Get started
 ==========
 
 ``` bash
-    $ gem install riemann-dash
-    $ riemann-dash
+    $ https://github.com/nuty/riemann-dash.git
+    $ ./bin/riemann-dash config.rb
 ```
 
 Then open http://localhost:4567 in a browser. Riemann-dash will connect to the
@@ -29,6 +29,9 @@ examples in "example/config.rb".
 set :port, 6000      # HTTP server on port 6000
 set :bind, "1.2.3.4" # Bind to a different interface
 config[:ws_config] = 'custom/config.json' # Specify custom workspace config
+
+config.store[:username] = 'username' # Specify custom username
+config.store[:password] = 'password' # Specify custom password
 ```
 
 You can also specify the default config file to be used by setting the
